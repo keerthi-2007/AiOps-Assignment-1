@@ -41,8 +41,8 @@ The following tools are required for the workflows:
 
 # Q4 – Reproducible MLflow Experiment
 Person A
-Name: Shivarchitha
-Roll Number: DA24B052
+* Name: Shivarchitha
+* Roll Number: DA24B052
 
 Person A performed the original Q4 workflow, including:
 
@@ -55,8 +55,8 @@ Person A performed the original Q4 workflow, including:
 * Providing the information required for Person B to reproduce the experiment.
 
 Person B
-Name: Vallem Keerthi Reddy
-Roll Number: DA24B051
+* Name: Vallem Keerthi Reddy
+* Roll Number: DA24B051
 
 Person B performs the reproduction workflow by:
 
