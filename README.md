@@ -71,9 +71,7 @@ Person B performs the reproduction workflow by:
 # Q4 – Environment Note
 
 * Important: Person A completed Part A of Q4 on a Windows environment.
-
 * The environment.yml committed to this repository was exported from Person A's Windows environment.
-
 * Therefore, the environment file contains Windows-specific dependencies such as:
 
 pywin32
@@ -91,11 +89,8 @@ getopt-win32
 # Q4 – Environment Setup
 
 1. Install Conda
-
 * Install either: Miniconda/Anaconda on the Windows system.
-
 * After installation, open: Anaconda Prompt or Miniconda Prompt
-
 Verify Conda:
 conda --version
 
