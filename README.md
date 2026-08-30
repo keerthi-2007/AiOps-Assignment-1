@@ -3,22 +3,22 @@
 This repository contains the implementation, experiments, evidence, and documentation for **AIOps Module 1 – Assignment 1**.
 
 aiops-assignment1-q4/
-│
-├── .dvc/
-├── q2-mlflow-images/
-├── q3_terminal_ss/
-├── q4_mlflow_logs/
-│
-├── .dvcignore
-├── .gitignore
-├── data.csv.dvc
-│
-├── q3_proof_rollback.png
-├── aiops-assignment1-q1234.mp4
-├── AIOps - Module 1 Assignment_report.pdf
-│
-├── README.md
-└── AI_DISCLOSURE.md
+* │
+* ├── .dvc/
+* ├── q2-mlflow-images/
+* ├── q3_terminal_ss/
+* ├── q4_mlflow_logs/
+* │
+* ├── .dvcignore
+* ├── .gitignore
+* ├── data.csv.dvc
+* │
+* ├── q3_proof_rollback.png
+* ├── aiops-assignment1-q1234.mp4
+* ├── AIOps - Module 1 Assignment_report.pdf
+* │
+* ├── README.md
+* └── AI_DISCLOSURE.md
 
 # Important Files and Folders
 * .dvc/ – DVC configuration and metadata.
@@ -85,10 +85,11 @@ getopt-win32
 
 * It also contains a Windows-specific Conda environment prefix.
 * Because of these Windows-specific dependencies:
-*Windows is recommended for reproducing Q4 using the provided environment.yml.
+* Windows is recommended for reproducing Q4 using the provided environment.yml.
 * Attempting to recreate the exact environment directly on Linux may result in Conda dependency-resolution errors because some of the packages in the exported environment are Windows-specific.
 
 # Q4 – Environment Setup
+
 1. Install Conda
 
 * Install either: Miniconda/Anaconda on the Windows system.
@@ -98,73 +99,7 @@ getopt-win32
 Verify Conda:
 conda --version
 
-2. Clone the Repository
-git clone https://github.com/shivaarchithavudutha/aiops-assignment1-q4.git
-Move into the repository:
-cd aiops-assignment1-q4
+2. Activate environment.yml
 
-3. Create the Environment
 
-Create the environment using the provided environment file:
 
-conda env create -f environment.yml
-
-Activate the environment:
-
-conda activate aiops-q4-env
-
-Verify Python:
-
-python --version
-If the Environment Already Exists
-
-If Conda displays:
-
-CondaValueError: prefix already exists
-
-the environment has already been created.
-
-Activate the existing environment instead:
-
-conda activate aiops-q4-env
-
-There is no need to create the environment again.
-
-Q4 – Configure DVC
-
-* The dataset is retrieved through the configured DVC remote.
-
-* After activating the environment, configure the DVC remote credentials locally:
-
-dvc config --local remote.b2remote.access_key_id <ACCESS_KEY>
-dvc config --local remote.b2remote.secret_access_key <SECRET_KEY>
-
-* Security: Replace the placeholders with the credentials provided in the actual repository. Do not commit the actual credentials to GitHub.
-
-* Check the configured DVC remote:
-
-dvc remote list
-
-* Pull the dataset:
-
-dvc pull
-
-* If dvc pull displays an error stating that S3 support is required, install the DVC S3 extension:
-
-pip install "dvc[s3]"
-
-* Then retry:
-
-dvc pull
-
-* Q4 – Run the Training
-
-* Once the environment has been activated and the dataset has been retrieved:
-
-python train.py
-
-Q4 - MLflow server 
-
-* In other terminal start MLflow server with the same port as mentioned in the training script .
-* Start ML flow server in the same environment .
-* 
